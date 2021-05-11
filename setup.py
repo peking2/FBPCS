@@ -18,8 +18,8 @@ with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="fbpcs",
-    version="0.1.0",
+    name="cicd-test-ziyan",
+    version="0.1.1",
     description="Facebook Private Computation Service",
     author="Facebook",
     author_email="researchtool-help@fb.com",
