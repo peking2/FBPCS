@@ -14,8 +14,8 @@ from fbpcs.entity.container_instance import ContainerInstance
 from fbpcs.service.container import ContainerService
 
 
-# patternlint-disable-next-line f-string-may-be-missing-leading-f
 ONE_DOCKER_CMD_PREFIX = (
+    # patternlint-disable-next-line f-string-may-be-missing-leading-f
     "python3.8 -m one_docker_runner --package_name={0} --cmd='/root/one_docker/package/"
 )
 
