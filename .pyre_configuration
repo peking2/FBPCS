@@ -10,7 +10,7 @@
       "site-package": "boto3"
     },
     {
-      "site-package": "tgdm"
+      "site-package": "tqdm"
     },
     {
       "site-package": "pyyaml"
