@@ -22,6 +22,6 @@
   "source_directories": [
     "fbpcs"
   ],
-  "strict": false,
+  "strict": true,
   "version": "0.0.101620731409"
 }
