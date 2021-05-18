@@ -1,7 +1,4 @@
 {
-  "ignore_all_errors": [
-    "fbpcs/decorator/error_handler.py"
-  ],
   "search_path": [
     {
       "site-package": "dataclasses_json"
