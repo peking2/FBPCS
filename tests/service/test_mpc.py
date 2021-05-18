@@ -5,9 +5,8 @@
 # LICENSE file in the root directory of this source tree.
 
 import unittest
-from unittest.mock import MagicMock, patch
+from unittest.mock import AsyncMock, MagicMock, patch
 
-from libfb.py.asyncio.mock import AsyncMock
 from fbpcs.entity.container_instance import ContainerInstance, ContainerInstanceStatus
 from fbpcs.entity.mpc_instance import MPCInstance, MPCInstanceStatus, MPCRole
 from fbpcs.service.mpc import MPCService
