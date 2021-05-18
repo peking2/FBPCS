@@ -14,6 +14,7 @@ from fbpcs.error.pcs import PcsError
 
 
 def error_handler(f: Callable[..., Any]) -> Callable:
+    # pyre-fixme[3]: Return type must be specified as type other than `Any`.
     def wrap(*args: Any, **kwargs: Any) -> Any:
         try:
             return f(*args, **kwargs)
