@@ -13,9 +13,8 @@ from fbpcs.error.mapper.aws import map_aws_error
 from fbpcs.error.pcs import PcsError
 
 
-def error_handler(f: Callable[..., Any]) -> Callable:
-    # pyre-fixme[3]: Return type must be specified as type other than `Any`.
-    def wrap(*args: Any, **kwargs: Any) -> Any:
+def error_handler(f: Callable[..., object]) -> Callable:
+    def wrap(*args: Any, **kwargs: Any) -> object:
         try:
             return f(*args, **kwargs)
         except ClientError as err:
