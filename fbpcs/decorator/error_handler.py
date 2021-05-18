@@ -15,7 +15,7 @@ from fbpcs.error.pcs import PcsError
 T = TypeVar("T")
 
 
-def error_handler(f: Callable[..., Any]) -> Callable:
+def error_handler(f: Callable[..., T]) -> Callable:
     def wrap(*args: T, **kwargs: T) -> T:
         try:
             return f(*args, **kwargs)
