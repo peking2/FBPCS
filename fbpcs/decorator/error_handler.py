@@ -14,8 +14,8 @@ from fbpcs.error.pcs import PcsError
 
 
 def error_handler(
-    f: Callable[[object, object], object]
-) -> Callable[[object, object], object]:
+    f: Callable[..., object]
+) -> Callable[..., object]:
     def wrap(*args: object, **kwargs: object) -> object:
         try:
             return f(*args, **kwargs)
