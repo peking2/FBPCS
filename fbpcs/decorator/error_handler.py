@@ -14,7 +14,7 @@ from fbpcs.error.pcs import PcsError
 
 
 def error_handler(f: Callable[..., Any]) -> Callable:
-    def wrap(*args: Any, **kwargs: Any):
+    def wrap(*args: Any, **kwargs: Any) -> Any:
         try:
             return f(*args, **kwargs)
         except ClientError as err:
