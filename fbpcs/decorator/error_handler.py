@@ -6,16 +6,17 @@
 
 # pyre-strict
 
-from typing import Any, Callable
+from typing import Any, Callable, TypeVar
 
 from botocore.exceptions import ClientError
 from fbpcs.error.mapper.aws import map_aws_error
 from fbpcs.error.pcs import PcsError
 
+T = TypeVar("T")
 
 # pyre-ignore
 def error_handler(f: Callable[..., Any]) -> Callable:
-    def wrap(*args: Any, **kwargs: Any) -> Any:
+    def wrap(*args: Any, **kwargs: Any) -> T:
         try:
             return f(*args, **kwargs)
         except ClientError as err:
