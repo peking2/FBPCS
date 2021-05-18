@@ -6,14 +6,14 @@
 
 # pyre-strict
 
-from typing import Callable
+from typing import Any, Callable
 
 from botocore.exceptions import ClientError
 from fbpcs.error.mapper.aws import map_aws_error
 from fbpcs.error.pcs import PcsError
 
 
-def error_handler(f: Callable[..., Any]) -> Callable[..., Any]:
+def error_handler(f: Callable) -> Callable[..., Any]:
     def wrap(*args: Any, **kwargs: Any) -> Any:
         try:
             return f(*args, **kwargs)
