@@ -5,17 +5,15 @@
 # LICENSE file in the root directory of this source tree.
 
 
-from typing import Any, Callable
+from typing import Callable
 
 from botocore.exceptions import ClientError
 from fbpcs.error.mapper.aws import map_aws_error
 from fbpcs.error.pcs import PcsError
 
 
-# pyre-ignore
-def error_handler(f: Callable[..., Any]) -> Callable[..., Any]:
-    # pyre-ignore
-    def wrap(*args: Any, **kwargs: Any) -> Any:
+def error_handler(f: Callable) -> Callable:
+    def wrap(*args, **kwargs):
         try:
             return f(*args, **kwargs)
         except ClientError as err:
