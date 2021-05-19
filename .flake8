@@ -70,33 +70,5 @@ exclude =
   buck-out/*,
   third-party-buck/*,
   third-party2/*
-
-# Calculate max-complexity by changing the value below to 1, then surveying fbcode
-# to see the distribution of complexity:
-#   find ./[a-z0-9]* -name 'buck-*' -prune -o -name 'third*party*' -prune -o \
-#     -name '*.py' -print |\
-#   parallel flake8 --config ./.flake8 |\
-#   perl -ne 'if (/C901/) { s/.*\((\d+)\)/$1/; print; }' | stats
-# NOTE: This will take a while to run (near an hour IME) so you probably want a
-# second working dir to run it in.
-# Pick a reasonable point from there (e.g. p95 or "95%")
-# As of 2016-05-18 the rough distribution is:
-#
-# count:    134807
-# min:      2
-# max:      206
-# avg:      4.361
-# median:   3
-# sum:      587882
-# stddev:   4.317
-# variance: 18.635
-#
-# percentiles:
-#     75%: 5
-#     90%: 8
-#     95%: 11
-#     99%: 20
-#   99.9%: 48
-#  99.99%: 107
-# 99.999%: 160
+  
 max-complexity = 12
