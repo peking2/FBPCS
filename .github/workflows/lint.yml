@@ -12,11 +12,10 @@ jobs:
       - name: Install Dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install black==21.4b2 \
-            flake8==3.9.0
+          python3 -m pip install -r lint_requirements.txt
       - name: Run Black
         run: |
           black --check --diff fbpcs
-      - name: Run Flake
+      - name: Run ufmt
         run: |
-          flake8
+          ufmt check .
