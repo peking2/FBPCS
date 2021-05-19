@@ -20,7 +20,7 @@ jobs:
           black --check --diff fbpcs
       - name: Run Flake
         run: |
-          flake8 --ignore E203,E501,W503 .
+          flake8
       - name: Run usort
         run: |
           usort check .
