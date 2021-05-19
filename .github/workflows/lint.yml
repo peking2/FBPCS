@@ -16,3 +16,6 @@ jobs:
       - name: Run ufmt
         run: |
           ufmt check .
+      - name: Run Flake
+        run: |
+          flake8
