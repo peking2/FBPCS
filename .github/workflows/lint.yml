@@ -13,9 +13,6 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install -r lint_requirements.txt
-      - name: Run Black
-        run: |
-          black --check --diff fbpcs
       - name: Run ufmt
         run: |
           ufmt check .
