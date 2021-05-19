@@ -14,10 +14,10 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install black==21.4b2 \
             flake8==3.9.0 \
-            isort==5.8.0
+            isort==4.3.21
       - name: Run isort
         run: |
-          isort -c .
+          isort -c -rc -sp .isort.cfg .
       - name: Run Black
         run: |
           black --check --diff fbpcs
