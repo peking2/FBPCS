@@ -14,7 +14,7 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install black==21.4b2 \
             flake8==3.9.0 \
-            usort=0.6.4
+            usort==0.6.4
       - name: Run Black
         run: |
           black --check --diff .
