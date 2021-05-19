@@ -19,4 +19,4 @@ jobs:
           black --check --diff fbpcs
       - name: Run Flake
         run: |
-          flake8 fbpcs
+          flake8 --ignore E203,E501,W503 fbpcs
