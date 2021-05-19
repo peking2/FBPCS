@@ -15,7 +15,7 @@ jobs:
           python3 -m pip install -r lint_requirements.txt
       - name: Run ufmt
         run: |
-          ufmt check .
+          ufmt check diff .
       - name: Run Flake
         run: |
           flake8
