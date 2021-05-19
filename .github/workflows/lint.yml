@@ -17,7 +17,7 @@ jobs:
             isort==5.8.0
       - name: Run isort
         run: |
-          isort --profile black -c .
+          isort -c .
       - name: Run Black
         run: |
           black --check --diff fbpcs
