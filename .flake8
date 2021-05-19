@@ -5,6 +5,7 @@ ignore =
     C901
 
     # covered by black/usort
+    B9
     E1
     E2
     E3
