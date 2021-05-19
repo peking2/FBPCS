@@ -17,7 +17,7 @@ jobs:
             usort==0.6.4
       - name: Run Black
         run: |
-          black --check --diff .
+          black --check --diff fbpcs
       - name: Run Flake
         run: |
           flake8 --ignore E203,E501,W503 .
